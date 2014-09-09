@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>E-Profound - jQuery Track Changes Plugin</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.track_changes.plugin.js"></script>
+        <style type="text/css">
+          .row {
+            padding: 3px 10px 3px 10px;
+          }
+          input[type=text] {
+            border: 1px solid #333;
+          }
+        </style>
+<script type="text/javascript">
+    $(document).ready( function($) {
+		$('input[name=\'test_1\'], textarea[name=\'test_3\']').TrackChanges({
+			fontStyle	: 'italic'
+		});
+	});
+</script>        
+    </head>
+    <body>
+             
+      <form name="ftest" id="ftest">
+        <div class="row">
+         <input type="text" name="test_1" value="The red brown fox jumped over the rolling log." style="width:830px">
+        </div>
+        <div class="row">
+         <input type="text" name="test_2" value=""  style="width:830px">
+        </div>
+        <div class="row">
+         <textarea name="test_3" rows="4" cols="40"  style="width:830px"></textarea>
+        </div>
+      </form>
+        
+    </body>
+</html>
